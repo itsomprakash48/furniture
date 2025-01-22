@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+// navbar.js
 
-        <!--=============== REMIXICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="assets/css/styles.css">
-
-        <title>Om Prakash</title>
-    </head>
-    <body>
-        <!--=============== HEADER ===============-->
+// Navbar component
+function createNavbar() {
+  const navbar = `
+<link rel="stylesheet" href="assets/css/styles.css">
+     <!--=============== HEADER ===============-->
         <header class="header">
             <nav class="nav container">
                 <div class="nav__data">
                     <a href="#" class="nav__logo">
-                        <i class="ri-code-s-slash-line"></i> Om prakash- Infinicode
+                        <i class="ri-code-s-slash-line"></i> CodeBox
                     </a>
     
                     <div class="nav__toggle" id="nav-toggle">
@@ -31,7 +22,7 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li>
-                            <a href="#" class="nav__link">Home</a>
+                            <a href="index.html" class="nav__link">Home</a>
                         </li>
 
                         <!--=============== DROPDOWN 1 ===============-->
@@ -245,143 +236,105 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#" class="nav__link">Contact Us</a>
+                            <a href="contactus.html" class="nav__link">Contact Us</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
 
-        <!--=============== MAIN ===============-->
-        <div class="main">
-            <section class="hero">
-                <div class="container hero__container">
-                    <!-- Left content -->
-                    <div class="hero__content">
-                        <h1 class="hero__title">Where Creativity Meets Comfort</h1>
-                        <p class="hero__description">Transform your space into a masterpiece. Where design meets comfort, your dream home comes to life.</p>
-                        <div class="hero__buttons">
-                            <a href="#courses" class="btn btn--primary">
-                                Explore Ideas
-                                <i class="ri-arrow-right-line"></i>
-                            </a>
-                            <a href="#about" class="btn btn--outline">
-                                Book Free Counsultation
-                            </a>
-                        </div>
-                        <div class="hero__stats">
-                            <div class="stats__item">
-                                <h3>7+</h3>
-                                <p>Cities</p>
-                            </div>
-                            <div class="stats__item">
-                                <h3>100+</h3>
-                                <p>Projects</p>
-                            </div>
-                        </div>
-                    </div>
         
-                    <!-- Right content -->
-                    <div class="hero__image">
-                        <img src="assets/images/mainhero.jpg" alt="Learning illustration">
-                        <div class="hero__card">
-                            <i class="ri-code-s-slash-line"></i>
-                            <span>Desines from experts</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+  `;
+    
+  return navbar;
+}
 
-<!-- Offerings Section -->
-<section class="offerings section">
-    <div class="container">
-            
-        <h2 class="section__title">One-stop shop for all things interiors</h2>
-        <p class="one-stop-shop__description">
-            Be it end-to-end interiors, renovation, or modular solutions, we have it all for your home or office. 
-            With a wide range of furniture & decor, we have your back from start to finish.
-        </p>
-        <div class="offerings__content">
-            <!-- Modular Interiors -->
-            <div class="offerings__item">
-                <img src="assets/images/hero-banner.jpg" alt="Modular Interiors" class="offerings__image">
-                <h3 class="offerings__title">Modular Interiors</h3>
-                <p class="offerings__description">
-                    Functional kitchen, wardrobe, and storage solutions tailored to your needs.
-                </p>
-                <a href="#" class="offerings__link">&gt;</a>
-            </div>
+// Add navbar to the page
+function loadNavbar() {
+  const header = document.createElement('header');
+  header.innerHTML = createNavbar();
+  document.body.prepend(header); // Add navbar at the top of the page
+}
 
-            <!-- Full Home Interiors -->
-            <div class="offerings__item">
-                <img src="assets/images/hero-banner.jpg" alt="Full Home Interiors" class="offerings__image">
-                <h3 class="offerings__title">Full Home Interiors</h3>
-                <p class="offerings__description">
-                    Turnkey interior solutions for your home, designed to perfection.
-                </p>
-                <a href="#" class="offerings__link">&gt;</a>
-            </div>
-
-            <!-- Modular Interiors -->
-            <div class="offerings__item">
-                <img src="assets/images/hero-banner.jpg" alt="Modular Interiors" class="offerings__image">
-                <h3 class="offerings__title">Modular Interiors</h3>
-                <p class="offerings__description">
-                    Functional kitchen, wardrobe, and storage solutions tailored to your needs.
-                </p>
-                <a href="#" class="offerings__link">&gt;</a>
-            </div>
-
-            <!-- Full Home Interiors -->
-            <div class="offerings__item">
-                <img src="assets/images/hero-banner.jpg" alt="Full Home Interiors" class="offerings__image">
-                <h3 class="offerings__title">Full Home Interiors</h3>
-                <p class="offerings__description">
-                    Turnkey interior solutions for your home, designed to perfection.
-                </p>
-                <a href="#" class="offerings__link">&gt;</a>
-            </div>
-
-           
-        </div>
-    </div>
-</section>
+// Call the function to load navbar
+loadNavbar();
 
 
-        <!--=============== WHY CHOOSE US ===============-->
-<section class="why-choose-us section">
-    <div class="container">
-        <h2 class="section__title">Why Choose Us</h2>
-        <div class="why-choose-us__content">
-            <div class="why-choose-us__item">
-                <i class="ri-star-line"></i>
-                <h3>Expert Designers</h3>
-                <p>Our team of experienced designers ensures your space is both functional and beautiful.</p>
-            </div>
-            <div class="why-choose-us__item">
-                <i class="ri-customer-service-line"></i>
-                <h3>24/7 Support</h3>
-                <p>We provide round-the-clock support to address all your queries and concerns.</p>
-            </div>
-            <div class="why-choose-us__item">
-                <i class="ri-money-dollar-circle-line"></i>
-                <h3>Affordable Pricing</h3>
-                <p>Get premium designs at competitive prices without compromising on quality.</p>
-            </div>
-            <div class="why-choose-us__item">
-                <i class="ri-calendar-check-line"></i>
-                <h3>On-Time Delivery</h3>
-                <p>We ensure timely completion of projects, so you can enjoy your new space sooner.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 
+
+
+/*=============== SHOW MENU ===============*/
+const showMenu = (toggleId, navId) =>{
+   const toggle = document.getElementById(toggleId),
+         nav = document.getElementById(navId)
+
+   toggle.addEventListener('click', () =>{
+       // Add show-menu class to nav menu
+       nav.classList.toggle('show-menu')
+       // Add show-icon to show and hide menu icon
+       toggle.classList.toggle('show-icon')
+   })
+}
+
+showMenu('nav-toggle','nav-menu')
+
+/*=============== SHOW DROPDOWN MENU ===============*/
+const dropdownItems = document.querySelectorAll('.dropdown__item')
+
+// 1. Select each dropdown item
+dropdownItems.forEach((item) =>{
+    const dropdownButton = item.querySelector('.dropdown__button') 
+
+    // 2. Select each button click
+    dropdownButton.addEventListener('click', () =>{
+        // 7. Select the current show-dropdown class
+        const showDropdown = document.querySelector('.show-dropdown')
         
-        <!--=============== MAIN JS ===============-->
-        <script src="assets/js/main.js"></script>
-        <script src="navbar.js"></script>
-    </body>
-</html>
+        // 5. Call the toggleItem function
+        toggleItem(item)
+
+        // 8. Remove the show-dropdown class from other items
+        if(showDropdown && showDropdown!== item){
+            toggleItem(showDropdown)
+        }
+    })
+})
+
+// 3. Create a function to display the dropdown
+const toggleItem = (item) =>{
+    // 3.1. Select each dropdown content
+    const dropdownContainer = item.querySelector('.dropdown__container')
+
+    // 6. If the same item contains the show-dropdown class, remove
+    if(item.classList.contains('show-dropdown')){
+        dropdownContainer.removeAttribute('style')
+        item.classList.remove('show-dropdown')
+    } else{
+        // 4. Add the maximum height to the dropdown content and add the show-dropdown class
+        dropdownContainer.style.height = dropdownContainer.scrollHeight + 'px'
+        item.classList.add('show-dropdown')
+    }
+}
+
+/*=============== DELETE DROPDOWN STYLES ===============*/
+const mediaQuery = matchMedia('(min-width: 1118px)'),
+      dropdownContainer = document.querySelectorAll('.dropdown__container')
+
+// Function to remove dropdown styles in mobile mode when browser resizes
+const removeStyle = () =>{
+    // Validate if the media query reaches 1118px
+    if(mediaQuery.matches){
+        // Remove the dropdown container height style
+        dropdownContainer.forEach((e) =>{
+            e.removeAttribute('style')
+        })
+
+        // Remove the show-dropdown class from dropdown item
+        dropdownItems.forEach((e) =>{
+            e.classList.remove('show-dropdown')
+        })
+    }
+}
+
+addEventListener('resize', removeStyle)
