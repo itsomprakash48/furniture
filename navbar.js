@@ -7,7 +7,7 @@ function createNavbar() {
             <nav class="nav container">
                 <div class="nav__data">
                     <a href="#" class="nav__logo">
-                        <i class="ri-code-s-slash-line"></i> CodeBox
+                        <i class="ri-code-s-slash-line"></i> Devyanshi Ambience
                     </a>
     
                     <div class="nav__toggle" id="nav-toggle">
