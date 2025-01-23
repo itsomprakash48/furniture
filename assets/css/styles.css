@@ -1,33 +1,43 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
+
   /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(220, 68%, 54%);
   --first-color-lighten: hsl(220, 68%, 97%);
   --title-color: hsl(220, 48%, 28%);
   --text-color: hsl(220, 12%, 45%);
   --body-color: hsl(220, 100%, 99%);
+  --scrollbar-thumb: hsl(220, 12%, 70%);
+  --box-shadow: hsla(220, 68%, 12%, 0.1);
+  --dropdown-bg: hsl(220, 68%, 97%);
+  --dropdown-hover: hsl(220, 68%, 54%);
+  --card-bg: hsl(0, 0%, 100%);
+  --button-hover: hsl(220, 68%, 54%);
+
   /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
   /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
+
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
 }
+
 @media screen and (min-width: 1024px) {
   :root {
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
   }
 }
 
@@ -65,7 +75,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  box-shadow: 0 2px 8px hsla(220, 68%, 12%, 0.1);
+  box-shadow: 0 2px 8px var(--box-shadow);
   background-color: var(--body-color);
   z-index: var(--z-fixed);
 }
@@ -74,12 +84,14 @@ a {
 .nav {
   height: var(--header-height);
 }
+
 .nav__data {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .nav__logo {
   display: inline-flex;
   align-items: center;
@@ -88,18 +100,23 @@ a {
   font-weight: var(--font-semi-bold);
   transition: color 0.3s;
 }
+
 .nav__logo i {
   font-size: 1.25rem;
 }
+
 .nav__logo:hover {
   color: var(--first-color);
 }
+
 .nav__toggle {
   position: relative;
   width: 32px;
   height: 32px;
 }
-.nav__toggle-menu, .nav__toggle-close {
+
+.nav__toggle-menu,
+.nav__toggle-close {
   font-size: 1.25rem;
   color: var(--title-color);
   position: absolute;
@@ -109,9 +126,11 @@ a {
   cursor: pointer;
   transition: opacity 0.1s, transform 0.4s;
 }
+
 .nav__toggle-close {
   opacity: 0;
 }
+
 @media screen and (max-width: 1118px) {
   .nav__menu {
     background-color: var(--body-color);
@@ -126,13 +145,16 @@ a {
     opacity: 0;
     transition: top 0.4s, opacity 0.3s;
   }
+
   .nav__menu::-webkit-scrollbar {
     width: 0.5rem;
   }
+
   .nav__menu::-webkit-scrollbar-thumb {
-    background-color: hsl(220, 12%, 70%);
+    background-color: var(--scrollbar-thumb);
   }
 }
+
 .nav__link {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
@@ -142,6 +164,7 @@ a {
   align-items: center;
   transition: background-color 0.3s;
 }
+
 .nav__link:hover {
   background-color: var(--first-color-lighten);
 }
@@ -168,51 +191,65 @@ a {
 .dropdown__button {
   cursor: pointer;
 }
+
 .dropdown__arrow {
   font-size: 1.5rem;
   font-weight: initial;
   transition: transform 0.4s;
 }
-.dropdown__content, .dropdown__group, .dropdown__list {
+
+.dropdown__content,
+.dropdown__group,
+.dropdown__list {
   display: grid;
 }
+
 .dropdown__container {
-  background-color: var(--first-color-lighten);
+  background-color: var(--dropdown-bg);
   height: 0;
   overflow: hidden;
   transition: height 0.4s;
 }
+
 .dropdown__content {
   row-gap: 1.75rem;
 }
+
 .dropdown__group {
   padding-left: 2.5rem;
   row-gap: 0.5rem;
 }
+
 .dropdown__group:first-child {
   margin-top: 1.25rem;
 }
+
 .dropdown__group:last-child {
   margin-bottom: 1.25rem;
 }
+
 .dropdown__icon i {
   font-size: 1.25rem;
   color: var(--first-color);
 }
+
 .dropdown__title {
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
 }
+
 .dropdown__list {
   row-gap: 0.25rem;
 }
+
 .dropdown__link {
   font-size: var(--smaller-font-size);
   font-weight: var(--font-medium);
   color: var(--text-color);
   transition: color 0.3s;
 }
+
 .dropdown__link:hover {
   color: var(--title-color);
 }
@@ -243,9 +280,6 @@ a {
     transform: translateY(0);
   }
 }
-
-
-
 
 /*=============== HERO SECTION ===============*/
 .hero {
@@ -336,15 +370,14 @@ a {
   position: absolute;
   right: -1rem;
   bottom: 2rem;
-  background-color: var(--body-color);
+  background-color: var(--card-bg);
   padding: 1rem;
   border-radius: 0.75rem;
-  box-shadow: 0 8px 24px hsla(220, 68%, 12%, 0.1);
+  box-shadow: 0 8px 24px var(--box-shadow);
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-
 
 /*=============== BREAKPOINTS FOR SMALL DEVICES ===============*/
 /* For small devices */
@@ -353,6 +386,7 @@ a {
     padding-left: 1.5rem;
   }
 }
+
 /* For large devices */
 @media screen and (min-width: 1118px) {
   /* Nav */
@@ -361,28 +395,35 @@ a {
     display: flex;
     justify-content: space-between;
   }
+
   .nav__toggle {
     display: none;
   }
+
   .nav__list {
     display: flex;
     column-gap: 3rem;
     height: 100%;
   }
+
   .nav li {
     display: flex;
   }
+
   .nav__link {
     padding: 0;
   }
+
   .nav__link:hover {
     background-color: initial;
   }
+
   /* Dropdown */
   .dropdown__button {
     column-gap: 0.25rem;
     pointer-events: none;
   }
+
   .dropdown__container {
     height: max-content;
     position: absolute;
@@ -390,28 +431,34 @@ a {
     right: 0;
     top: 6.5rem;
     background-color: var(--body-color);
-    box-shadow: 0 6px 8px hsla(220, 68%, 12%, 0.05);
+    box-shadow: 0 6px 8px var(--box-shadow);
     pointer-events: none;
     opacity: 0;
     transition: top 0.4s, opacity 0.3s;
   }
+
   .dropdown__content {
     grid-template-columns: repeat(4, max-content);
     column-gap: 6rem;
     max-width: 1120px;
     margin-inline: auto;
   }
+
   .dropdown__group {
     padding: 4rem 0;
     align-content: baseline;
     row-gap: 1.25rem;
   }
-  .dropdown__group:first-child, .dropdown__group:last-child {
+
+  .dropdown__group:first-child,
+  .dropdown__group:last-child {
     margin: 0;
   }
+
   .dropdown__list {
     row-gap: 0.75rem;
   }
+
   .dropdown__icon {
     width: 60px;
     height: 60px;
@@ -421,24 +468,31 @@ a {
     place-items: center;
     margin-bottom: 1rem;
   }
+
   .dropdown__icon i {
     font-size: 2rem;
   }
+
   .dropdown__title {
     font-size: var(--normal-font-size);
   }
+
   .dropdown__link {
     font-size: var(--small-font-size);
   }
+
   .dropdown__link:hover {
     color: var(--first-color);
   }
+
   .dropdown__item {
     cursor: pointer;
   }
+
   .dropdown__item:hover .dropdown__arrow {
     transform: rotate(180deg);
   }
+
   .dropdown__item:hover > .dropdown__container {
     top: 5.5rem;
     opacity: 1;
@@ -453,27 +507,26 @@ a {
   }
 }
 
-/* Responsive  hero section*/
+/* Responsive hero section */
 @media screen and (min-width: 968px) {
   .hero__container {
-      grid-template-columns: repeat(2, 1fr);
-      align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
   }
-  
+
   .hero__content {
-      text-align: left;
+    text-align: left;
   }
-  
+
   .hero__buttons,
   .hero__stats {
-      justify-content: flex-start;
+    justify-content: flex-start;
   }
-  
+
   .hero__title {
-      font-size: 3.5rem;
+    font-size: 3.5rem;
   }
 }
-
 
 /*=============== WHY CHOOSE US ===============*/
 .why-choose-us {
@@ -493,7 +546,7 @@ a {
   padding: 2rem;
   background-color: var(--body-color);
   border-radius: 1rem;
-  box-shadow: 0 4px 16px hsla(220, 68%, 12%, 0.1);
+  box-shadow: 0 4px 16px var(--box-shadow);
 }
 
 .why-choose-us__item i {
@@ -513,21 +566,7 @@ a {
   color: var(--text-color);
 }
 
-
-
-
-
-
-/* Offerings Section */
-
-.one-stop-shop__description {
-  font-size: 1.1rem;
-  color: var(--text-color);
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-
+/*=============== OFFERINGS SECTION ===============*/
 .offerings {
   padding: 5rem 0;
   background-color: var(--body-color);
@@ -550,7 +589,7 @@ a {
   background-color: var(--first-color-lighten);
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 4px 16px hsla(220, 68%, 12%, 0.1);
+  box-shadow: 0 4px 16px var(--box-shadow);
   transition: transform 0.3s;
 }
 
@@ -588,7 +627,171 @@ a {
 }
 
 .offerings__link:hover {
-  background-color: var(--first-color);
+  background-color: var(--button-hover);
   transform: scale(1.1);
 }
 
+
+/*=============== Footer  ===============*/
+
+.footer {
+  background-color: var(--body-color); /* Same as navbar */
+  padding: 3rem 0 1rem;
+  color: var(--text-color);
+  border-top: 1px solid var(--first-color-lighten);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.footer__title {
+  font-size: 1.1rem;
+  color: var(--title-color);
+  margin-bottom: 1rem;
+  font-weight: var(--font-semi-bold);
+}
+
+/* Social Media Links (Vertical Layout) */
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer__social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer__social-link {
+  font-size: 1.25rem;
+  color: var(--first-color);
+  transition: color 0.3s;
+}
+
+.footer__social-link:hover {
+  color: var(--title-color);
+}
+
+/* Quick Links, Our Services, Legal Links */
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__link {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.footer__link:hover {
+  color: var(--first-color);
+}
+
+/* Contact Form */
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid var(--first-color);
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: var(--small-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.footer__textarea {
+  resize: none;
+  height: 100px;
+}
+
+.footer__button {
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: var(--small-font-size);
+}
+
+.footer__button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Location */
+.footer__location {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer__text {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+/* Footer Bottom (Copyright and Made with Love) */
+.footer__bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--first-color-lighten);
+}
+
+.footer__copy {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+.footer__made {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-top: 0.5rem;
+}
+
+.footer__made i {
+  color: var(--first-color);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer__social-links {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}

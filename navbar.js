@@ -1,9 +1,7 @@
-// navbar.js
-
-// Navbar component
+// Navbar Component
 function createNavbar() {
-  const navbar = `
-<link rel="stylesheet" href="assets/css/styles.css">
+    return `
+      <link rel="stylesheet" href="assets/css/styles.css">
      <!--=============== HEADER ===============-->
         <header class="header">
             <nav class="nav container">
@@ -243,98 +241,188 @@ function createNavbar() {
             </nav>
         </header>
 
-        
-  `;
-    
-  return navbar;
-}
+    `;
+  }
+  
+  // Footer Component
+  function createFooter() {
+    return `
+      <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer__container container">
+      <!-- Social Media Links -->
+      <div class="footer__social">
+        <h3 class="footer__title">Follow Us</h3>
+        <div class="footer__social-links">
+          <a href="#" class="footer__social-link"><i class="ri-facebook-fill"></i></a>
+          <a href="#" class="footer__social-link"><i class="ri-twitter-fill"></i></a>
+          <a href="#" class="footer__social-link"><i class="ri-instagram-fill"></i></a>
+          <a href="#" class="footer__social-link"><i class="ri-linkedin-fill"></i></a>
+          <a href="#" class="footer__social-link"><i class="ri-youtube-fill"></i></a>
+        </div>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="footer__links">
+        <h3 class="footer__title">Quick Links</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">About Us</a></li>
+          <li><a href="#" class="footer__link">Services</a></li>
+          <li><a href="#" class="footer__link">Solutions</a></li>
+          <li><a href="#" class="footer__link">Insights</a></li>
+          <li><a href="#" class="footer__link">Contact</a></li>
+          <li><a href="#" class="footer__link">Explore</a></li>
+        </ul>
+      </div>
+  
+      <!-- Our Services -->
+      <div class="footer__links">
+        <h3 class="footer__title">Our Services</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Modular Interiors</a></li>
+          <li><a href="#" class="footer__link">Full Home Interiors</a></li>
+          <li><a href="#" class="footer__link">Renovation</a></li>
+          <li><a href="#" class="footer__link">Custom Designs</a></li>
+        </ul>
+      </div>
+  
+      <!-- Legal Links -->
+      <div class="footer__links">
+        <h3 class="footer__title">Legal</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Privacy Policy</a></li>
+          <li><a href="#" class="footer__link">Terms of Service</a></li>
+          <li><a href="#" class="footer__link">GDPR</a></li>
+          <li><a href="#" class="footer__link">Security</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Form -->
+      <div class="footer__contact">
+        <h3 class="footer__title">Contact Us</h3>
+        <form class="footer__form">
+          <input type="text" placeholder="Your Name" class="footer__input" required />
+          <input type="email" placeholder="Your Email" class="footer__input" required />
+          <textarea placeholder="Your Message" class="footer__input footer__textarea" required></textarea>
+          <button type="submit" class="footer__button">Send Message</button>
+        </form>
+      </div>
+  
+      <!-- Location -->
+      <div class="footer__location">
+        <h3 class="footer__title">Our Location</h3>
+        <p class="footer__text">123 Interior Street, Creative City, Designland</p>
+        <p class="footer__text">Phone: +123 456 7890</p>
+        <p class="footer__text">Email: info@interiordesign.com</p>
+      </div>
+    </div>
+  
+    <!-- Copyright and Made with Love -->
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2023 Interior Design. All Rights Reserved.</p>
+      <p class="footer__made">Made with <i class="ri-heart-fill"></i> by Om Prakash</p>
+    </div>
+  </footer>
 
-// Add navbar to the page
-function loadNavbar() {
-  const header = document.createElement('header');
-  header.innerHTML = createNavbar();
-  document.body.prepend(header); // Add navbar at the top of the page
-}
-
-// Call the function to load navbar
-loadNavbar();
-
-
-
-
-
-
-/*=============== SHOW MENU ===============*/
-const showMenu = (toggleId, navId) =>{
-   const toggle = document.getElementById(toggleId),
-         nav = document.getElementById(navId)
-
-   toggle.addEventListener('click', () =>{
-       // Add show-menu class to nav menu
-       nav.classList.toggle('show-menu')
-       // Add show-icon to show and hide menu icon
-       toggle.classList.toggle('show-icon')
-   })
-}
-
-showMenu('nav-toggle','nav-menu')
-
-/*=============== SHOW DROPDOWN MENU ===============*/
-const dropdownItems = document.querySelectorAll('.dropdown__item')
-
-// 1. Select each dropdown item
-dropdownItems.forEach((item) =>{
-    const dropdownButton = item.querySelector('.dropdown__button') 
-
-    // 2. Select each button click
-    dropdownButton.addEventListener('click', () =>{
-        // 7. Select the current show-dropdown class
-        const showDropdown = document.querySelector('.show-dropdown')
-        
-        // 5. Call the toggleItem function
-        toggleItem(item)
-
-        // 8. Remove the show-dropdown class from other items
-        if(showDropdown && showDropdown!== item){
-            toggleItem(showDropdown)
+    `;
+  }
+  
+  // Add navbar to the page
+  function loadNavbar() {
+    const header = document.createElement('header');
+    header.innerHTML = createNavbar();
+    document.body.prepend(header); // Add navbar at the top of the page
+  }
+  
+  // Add footer to the page
+  function loadFooter() {
+    const footer = document.createElement('footer');
+    footer.innerHTML = createFooter();
+    document.body.appendChild(footer); // Add footer at the bottom of the page
+  }
+  
+  // Call the functions to load navbar and footer
+  loadNavbar();
+  loadFooter();
+  
+  // Show/hide mobile menu
+  function showMenu(toggleId, navId) {
+    const toggle = document.getElementById(toggleId),
+          nav = document.getElementById(navId);
+  
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('show-menu');
+        toggle.classList.toggle('show-icon');
+      });
+    }
+  }
+  
+  showMenu('nav-toggle', 'nav-menu');
+  
+  // Dropdown functionality
+  const dropdownItems = document.querySelectorAll('.dropdown__item');
+  
+  dropdownItems.forEach((item) => {
+    const dropdownButton = item.querySelector('.dropdown__button');
+  
+    if (dropdownButton) {
+      dropdownButton.addEventListener('click', () => {
+        const showDropdown = document.querySelector('.show-dropdown');
+        toggleItem(item);
+  
+        if (showDropdown && showDropdown !== item) {
+          toggleItem(showDropdown);
         }
-    })
-})
-
-// 3. Create a function to display the dropdown
-const toggleItem = (item) =>{
-    // 3.1. Select each dropdown content
-    const dropdownContainer = item.querySelector('.dropdown__container')
-
-    // 6. If the same item contains the show-dropdown class, remove
-    if(item.classList.contains('show-dropdown')){
-        dropdownContainer.removeAttribute('style')
-        item.classList.remove('show-dropdown')
-    } else{
-        // 4. Add the maximum height to the dropdown content and add the show-dropdown class
-        dropdownContainer.style.height = dropdownContainer.scrollHeight + 'px'
-        item.classList.add('show-dropdown')
+      });
     }
-}
-
-/*=============== DELETE DROPDOWN STYLES ===============*/
-const mediaQuery = matchMedia('(min-width: 1118px)'),
-      dropdownContainer = document.querySelectorAll('.dropdown__container')
-
-// Function to remove dropdown styles in mobile mode when browser resizes
-const removeStyle = () =>{
-    // Validate if the media query reaches 1118px
-    if(mediaQuery.matches){
-        // Remove the dropdown container height style
-        dropdownContainer.forEach((e) =>{
-            e.removeAttribute('style')
-        })
-
-        // Remove the show-dropdown class from dropdown item
-        dropdownItems.forEach((e) =>{
-            e.classList.remove('show-dropdown')
-        })
+  });
+  
+  // Toggle dropdown item
+  function toggleItem(item) {
+    const dropdownContainer = item.querySelector('.dropdown__container');
+  
+    if (item.classList.contains('show-dropdown')) {
+      dropdownContainer.removeAttribute('style');
+      item.classList.remove('show-dropdown');
+    } else {
+      dropdownContainer.style.height = dropdownContainer.scrollHeight + 'px';
+      item.classList.add('show-dropdown');
     }
-}
-
-addEventListener('resize', removeStyle)
+  }
+  
+  // Remove dropdown styles on larger screens
+  function removeDropdownStyles() {
+    const mediaQuery = matchMedia('(min-width: 1118px)');
+    const dropdownContainers = document.querySelectorAll('.dropdown__container');
+    const dropdownItems = document.querySelectorAll('.dropdown__item');
+  
+    if (mediaQuery.matches) {
+      dropdownContainers.forEach((container) => {
+        container.removeAttribute('style');
+      });
+  
+      dropdownItems.forEach((item) => {
+        item.classList.remove('show-dropdown');
+      });
+    }
+  }
+  
+  // Add resize event listener
+  window.addEventListener('resize', removeDropdownStyles);
+  
+  // Theme toggle functionality
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  }
+  
+  // Add theme toggle button event listener
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+  }
