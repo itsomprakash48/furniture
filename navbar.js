@@ -2,250 +2,295 @@
 function createNavbar() {
     return `
       <link rel="stylesheet" href="assets/css/styles.css">
-     <!--=============== HEADER ===============-->
-        <header class="header">
-            <nav class="nav container">
-                <div class="nav__data">
-                    <a href="#" class="nav__logo">
-                        <i class="ri-code-s-slash-line"></i> Devyanshi Ambience
-                    </a>
-    
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="ri-menu-line nav__toggle-menu"></i>
-                        <i class="ri-close-line nav__toggle-close"></i>
+<!--=============== HEADER ===============-->
+<header class="header">
+    <nav class="nav container">
+        <div class="nav__data">
+            <a href="#" class="nav__logo">
+                <i class="ri-code-s-slash-line"></i> Devyanshi Ambience
+            </a>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line nav__toggle-menu"></i>
+                <i class="ri-close-line nav__toggle-close"></i>
+            </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li>
+                    <a href="index.html" class="nav__link">Home</a>
+                </li>
+
+                <!--=============== Designs  ===============-->
+                <li class="dropdown__item">
+                    <div class="nav__link dropdown__button">
+                        Designs <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                     </div>
-                </div>
 
-                <!--=============== NAV MENU ===============-->
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li>
-                            <a href="index.html" class="nav__link">Home</a>
-                        </li>
-
-                        <!--=============== DROPDOWN 1 ===============-->
-                        <li class="dropdown__item">                      
-                            <div class="nav__link dropdown__button">
-                                Cities <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    <div class="dropdown__container">
+                        <div class="dropdown__content">
+                            <!-- Modular Kitchen Designs -->
+                            <div class="dropdown__group">
+                                <span class="dropdown__title">Modular Kitchen Designs</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">Modern Kitchens</a></li>
+                                    <li><a href="#" class="dropdown__link">Compact Kitchens</a></li>
+                                    <li><a href="#" class="dropdown__link">Luxury Kitchens</a></li>
+                                </ul>
                             </div>
 
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-flashlight-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Most viewed courses</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">HTML for beginners</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Advanced CSS</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">JavaScript OOP</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-heart-3-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Popular courses</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Development with Flutter</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Web development with React</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Backend development expert</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-book-mark-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Careers</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Web development</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Applications development</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">UI/UX design</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Informatic security</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-file-paper-2-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Certifications</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Course certificates</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Free certifications</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <!-- Dining Room Designs -->
+                            <div class="dropdown__group">
+                                <span class="dropdown__title">Dining Room Designs</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">Formal Dining</a></li>
+                                    <li><a href="#" class="dropdown__link">Casual Dining</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Tile Designs -->
+                            <div class="dropdown__group">
+                                <span class="dropdown__title">Tile Designs</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">Floor Tiles</a></li>
+                                    <li><a href="#" class="dropdown__link">Wall Tiles</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Wardrobe Designs -->
+                            <div class="dropdown__group">
+                                <span class="dropdown__title">Wardrobe Designs</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">Walk-in Wardrobes</a></li>
+                                    <li><a href="#" class="dropdown__link">Sliding Wardrobes</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Living Room Designs -->
+                            <div class="dropdown__group">
+                                <span class="dropdown__title">Living Room Designs</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">Contemporary Living Rooms</a></li>
+                                    <li><a href="#" class="dropdown__link">Minimalist Living Rooms</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Bathroom Designs -->
+                            <div class="dropdown__group">
+                                <span class="dropdown__title">Bathroom Designs</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">Modern Bathrooms</a></li>
+                                    <li><a href="#" class="dropdown__link">Small Bathrooms</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Master Bedroom Designs -->
+                            <div class="dropdown__group">
+                                <span class="dropdown__title">Master Bedroom Designs</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">Luxury Bedrooms</a></li>
+                                    <li><a href="#" class="dropdown__link">Cozy Bedrooms</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Kids Bedroom Designs -->
+                            <div class="dropdown__group">
+                                <span class="dropdown__title">Kids Bedroom Designs</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">Themed Bedrooms</a></li>
+                                    <li><a href="#" class="dropdown__link">Playful Designs</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Balcony Designs -->
+                            <div class="dropdown__group">
+                                <span class="dropdown__title">Balcony Designs</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">Small Balconies</a></li>
+                                    <li><a href="#" class="dropdown__link">Garden Balconies</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Pooja Room Designs -->
+                            <div class="dropdown__group">
+                                <span class="dropdown__title">Pooja Room Designs</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">Traditional Pooja Rooms</a></li>
+                                    <li><a href="#" class="dropdown__link">Modern Pooja Rooms</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Add more categories as needed -->
+                        </div>
+                    </div>
+                </li>
+
+                <!--=============== Cities ===============-->
+                <li class="dropdown__item">
+                    <div class="nav__link dropdown__button">
+                        Cities <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+
+                    <div class="dropdown__container">
+                        <div class="dropdown__content">
+                            <!-- Maharashtra -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                    <i class="ri-map-pin-line"></i> <!-- City Icon -->
                                 </div>
+                                <span class="dropdown__title">Maharashtra</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">Mumbai</a></li>
+                                    <li><a href="#" class="dropdown__link">Pune</a></li>
+                                    <li><a href="#" class="dropdown__link">Nagpur</a></li>
+                                </ul>
                             </div>
-                        </li>
 
-                        <!--=============== DROPDOWN 2 ===============-->
-                        <li class="dropdown__item">
-                            <div class="nav__link dropdown__button">
-                                Desines <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-code-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Web templates</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Free templates</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Premium templates</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-pen-nib-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Designs</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Web designs</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">App designs</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Component design</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-apps-2-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Others</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Recent blogs</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Tutorial videos</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Webinar</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <!-- Karnataka -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                    <i class="ri-map-pin-line"></i> <!-- City Icon -->
                                 </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <a href="#" class="nav__link">Pricing</a>
-                        </li>
-
-                        <!--=============== DROPDOWN 3 ===============-->
-                        <li class="dropdown__item">                        
-                            <div class="nav__link dropdown__button">
-                                Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                                <span class="dropdown__title">Karnataka</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">Bangalore</a></li>
+                                    <li><a href="#" class="dropdown__link">Mysore</a></li>
+                                    <li><a href="#" class="dropdown__link">Hubli</a></li>
+                                </ul>
                             </div>
 
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-community-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">About us</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">About us</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Support</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Contact us</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-shield-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Safety and quality</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Cookie settings</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Privacy Policy</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <!-- Tamil Nadu -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                    <i class="ri-map-pin-line"></i> <!-- City Icon -->
                                 </div>
+                                <span class="dropdown__title">Tamil Nadu</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">Chennai</a></li>
+                                    <li><a href="#" class="dropdown__link">Coimbatore</a></li>
+                                    <li><a href="#" class="dropdown__link">Madurai</a></li>
+                                </ul>
                             </div>
-                        </li>
-                        <li>
-                            <a href="contactus.html" class="nav__link">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
 
+                            <!-- Delhi -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                    <i class="ri-map-pin-line"></i> <!-- City Icon -->
+                                </div>
+                                <span class="dropdown__title">Delhi</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">New Delhi</a></li>
+                                    <li><a href="#" class="dropdown__link">Noida</a></li>
+                                    <li><a href="#" class="dropdown__link">Gurgaon</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Delhi -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                    <i class="ri-map-pin-line"></i> <!-- City Icon -->
+                                </div>
+                                <span class="dropdown__title">Delhi</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">New Delhi</a></li>
+                                    <li><a href="#" class="dropdown__link">Noida</a></li>
+                                    <li><a href="#" class="dropdown__link">Gurgaon</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Delhi -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                    <i class="ri-map-pin-line"></i> <!-- City Icon -->
+                                </div>
+                                <span class="dropdown__title">Delhi</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">New Delhi</a></li>
+                                    <li><a href="#" class="dropdown__link">Noida</a></li>
+                                    <li><a href="#" class="dropdown__link">Gurgaon</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Delhi -->
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                    <i class="ri-map-pin-line"></i> <!-- City Icon -->
+                                </div>
+                                <span class="dropdown__title">Delhi</span>
+                                <ul class="dropdown__list">
+                                    <li><a href="#" class="dropdown__link">New Delhi</a></li>
+                                    <li><a href="#" class="dropdown__link">Noida</a></li>
+                                    <li><a href="#" class="dropdown__link">Gurgaon</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="nav__link">Pricing</a>
+                </li>
+
+                <!--=============== DROPDOWN 3 ===============-->
+                <li class="dropdown__item">
+                    <div class="nav__link dropdown__button">
+                        Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+
+                    <div class="dropdown__container">
+                        <div class="dropdown__content">
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                    <i class="ri-community-line"></i>
+                                </div>
+
+                                <span class="dropdown__title">About us</span>
+
+                                <ul class="dropdown__list">
+                                    <li>
+                                        <a href="#" class="dropdown__link">About us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown__link">Support</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown__link">Contact us</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="dropdown__group">
+                                <div class="dropdown__icon">
+                                    <i class="ri-shield-line"></i>
+                                </div>
+
+                                <span class="dropdown__title">Safety and quality</span>
+
+                                <ul class="dropdown__list">
+                                    <li>
+                                        <a href="#" class="dropdown__link">Cookie settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown__link">Privacy Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="contactus.html" class="nav__link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
     `;
-  }
-  
-  // Footer Component
-  function createFooter() {
+}
+
+// Footer Component
+function createFooter() {
     return `
       <!-- Footer Section -->
 <footer class="footer">
@@ -325,104 +370,104 @@ function createNavbar() {
   </footer>
 
     `;
-  }
-  
-  // Add navbar to the page
-  function loadNavbar() {
+}
+
+// Add navbar to the page
+function loadNavbar() {
     const header = document.createElement('header');
     header.innerHTML = createNavbar();
     document.body.prepend(header); // Add navbar at the top of the page
-  }
-  
-  // Add footer to the page
-  function loadFooter() {
+}
+
+// Add footer to the page
+function loadFooter() {
     const footer = document.createElement('footer');
     footer.innerHTML = createFooter();
     document.body.appendChild(footer); // Add footer at the bottom of the page
-  }
-  
-  // Call the functions to load navbar and footer
-  loadNavbar();
-  loadFooter();
-  
-  // Show/hide mobile menu
-  function showMenu(toggleId, navId) {
+}
+
+// Call the functions to load navbar and footer
+loadNavbar();
+loadFooter();
+
+// Show/hide mobile menu
+function showMenu(toggleId, navId) {
     const toggle = document.getElementById(toggleId),
-          nav = document.getElementById(navId);
-  
+        nav = document.getElementById(navId);
+
     if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        nav.classList.toggle('show-menu');
-        toggle.classList.toggle('show-icon');
-      });
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('show-menu');
+            toggle.classList.toggle('show-icon');
+        });
     }
-  }
-  
-  showMenu('nav-toggle', 'nav-menu');
-  
-  // Dropdown functionality
-  const dropdownItems = document.querySelectorAll('.dropdown__item');
-  
-  dropdownItems.forEach((item) => {
+}
+
+showMenu('nav-toggle', 'nav-menu');
+
+// Dropdown functionality
+const dropdownItems = document.querySelectorAll('.dropdown__item');
+
+dropdownItems.forEach((item) => {
     const dropdownButton = item.querySelector('.dropdown__button');
-  
+
     if (dropdownButton) {
-      dropdownButton.addEventListener('click', () => {
-        const showDropdown = document.querySelector('.show-dropdown');
-        toggleItem(item);
-  
-        if (showDropdown && showDropdown !== item) {
-          toggleItem(showDropdown);
-        }
-      });
+        dropdownButton.addEventListener('click', () => {
+            const showDropdown = document.querySelector('.show-dropdown');
+            toggleItem(item);
+
+            if (showDropdown && showDropdown !== item) {
+                toggleItem(showDropdown);
+            }
+        });
     }
-  });
-  
-  // Toggle dropdown item
-  function toggleItem(item) {
+});
+
+// Toggle dropdown item
+function toggleItem(item) {
     const dropdownContainer = item.querySelector('.dropdown__container');
-  
+
     if (item.classList.contains('show-dropdown')) {
-      dropdownContainer.removeAttribute('style');
-      item.classList.remove('show-dropdown');
+        dropdownContainer.removeAttribute('style');
+        item.classList.remove('show-dropdown');
     } else {
-      dropdownContainer.style.height = dropdownContainer.scrollHeight + 'px';
-      item.classList.add('show-dropdown');
+        dropdownContainer.style.height = dropdownContainer.scrollHeight + 'px';
+        item.classList.add('show-dropdown');
     }
-  }
-  
-  // Remove dropdown styles on larger screens
-  function removeDropdownStyles() {
+}
+
+// Remove dropdown styles on larger screens
+function removeDropdownStyles() {
     const mediaQuery = matchMedia('(min-width: 1118px)');
     const dropdownContainers = document.querySelectorAll('.dropdown__container');
     const dropdownItems = document.querySelectorAll('.dropdown__item');
-  
+
     if (mediaQuery.matches) {
-      dropdownContainers.forEach((container) => {
-        container.removeAttribute('style');
-      });
-  
-      dropdownItems.forEach((item) => {
-        item.classList.remove('show-dropdown');
-      });
+        dropdownContainers.forEach((container) => {
+            container.removeAttribute('style');
+        });
+
+        dropdownItems.forEach((item) => {
+            item.classList.remove('show-dropdown');
+        });
     }
-  }
-  
-  // Add resize event listener
-  window.addEventListener('resize', removeDropdownStyles);
-  
-  // Theme toggle functionality
-  function toggleTheme() {
+}
+
+// Add resize event listener
+window.addEventListener('resize', removeDropdownStyles);
+
+// Theme toggle functionality
+function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     if (currentTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'light');
+        document.documentElement.setAttribute('data-theme', 'light');
     } else {
-      document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
     }
-  }
-  
-  // Add theme toggle button event listener
-  const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
+}
+
+// Add theme toggle button event listener
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
     themeToggle.addEventListener('click', toggleTheme);
-  }
+}

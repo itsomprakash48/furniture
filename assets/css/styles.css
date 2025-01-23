@@ -209,10 +209,13 @@ a {
   height: 0;
   overflow: hidden;
   transition: height 0.4s;
+  max-height: 400px; /* Maximum height for dropdown */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
-.dropdown__content {
-  row-gap: 1.75rem;
+.dropdown__content {      
+  row-gap: 5rem;
+  padding: 1rem; /* Add padding for better spacing */
 }
 
 .dropdown__group {
@@ -438,14 +441,14 @@ a {
   }
 
   .dropdown__content {
-    grid-template-columns: repeat(4, max-content);
+    grid-template-columns: repeat(5, 1fr);
     column-gap: 6rem;
     max-width: 1120px;
     margin-inline: auto;
   }
 
   .dropdown__group {
-    padding: 4rem 0;
+    padding: 0.1rem 0;
     align-content: baseline;
     row-gap: 1.25rem;
   }
