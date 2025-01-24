@@ -471,3 +471,33 @@ const themeToggle = document.getElementById('theme-toggle');
 if (themeToggle) {
     themeToggle.addEventListener('click', toggleTheme);
 }
+
+
+
+
+// new hero section
+
+    let slides = document.querySelectorAll('.slide');
+    let dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            clearInterval(slideInterval); // Stop auto-slide on manual navigation
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+            slideInterval = setInterval(nextSlide, 5000); // Restart auto-slide
+        });
+    });
